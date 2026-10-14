@@ -1,0 +1,20 @@
+<template>
+	<view class="page">
+		<saco-button type="primary" @click="onClick">按钮</saco-button>
+	</view>
+</template>
+
+<script setup lang="uts">
+	const onClick = () => {
+		uni.showToast({
+			title: '点击',
+			icon: 'none',
+		})
+	}
+</script>
+
+<style>
+	.page {
+		padding: 24px;
+	}
+</style>

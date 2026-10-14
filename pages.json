@@ -1,0 +1,22 @@
+{
+	"easycom": {
+		"autoscan": true,
+		"custom": {
+			"^saco-(.*)": "@saco/ui/app/components/$1/app.vue"
+		}
+	},
+	"pages": [
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "saco-ui"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-appx",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	}
+}

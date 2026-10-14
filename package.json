@@ -1,0 +1,7 @@
+{
+	"name": "uni-appx",
+	"private": true,
+	"dependencies": {
+		"@saco/ui": "file:../saco-ui"
+	}
+}

@@ -1,0 +1,7 @@
+// 必须写在 @import 前面。var.scss 里是 !default，写晚了会留下默认的 data-theme-type
+// 亮色挂在 page 上。暗色同一节点，由系统 prefers-color-scheme 包一层，页面不要写死主题类
+$theme-light-selector: 'page';
+$theme-dark-selector: 'page';
+$theme-dark-media: '(prefers-color-scheme: dark)';
+
+@import '@saco/ui/theme-chalk/src/common/var.scss';

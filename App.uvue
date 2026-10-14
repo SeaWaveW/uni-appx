@@ -1,0 +1,10 @@
+<script setup lang="uts">
+	onLaunch(() => {
+		console.log('App Launch')
+	})
+</script>
+
+<style lang="scss">
+	/* 色板全局一份。组件样式在各自 app.vue 里，用到才编译 */
+	@import '@saco/ui/theme-chalk/src/base.scss';
+</style>
