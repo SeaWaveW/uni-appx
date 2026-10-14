@@ -6,7 +6,11 @@
 		"i18n": "node modules/i18n/script.mjs"
 	},
 	"dependencies": {
+		"@saco/rpx-plugin": "^1.0.0",
 		"@saco/ui": "file:../saco-ui",
 		"@saco/xlsx-plugin": "^1.0.1"
+	},
+	"rpx-plugin": {
+		"designWidth": 375
 	}
 }
