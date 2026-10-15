@@ -7,4 +7,22 @@
 <style lang="scss">
 	/* 色板全局一份。组件样式在各自 app.vue 里，用到才编译 */
 	@import '@saco/ui/theme-chalk/src/base.scss';
+
+	/* 编译器已经把 flex、box-sizing 重置成和 App 一致。这里只把页面画到色板上。
+	   pages.json 的窗口色是固定值，暗色切不过去，所以底色跟变量走。
+	   uvue 不认 page 这种标签选择器，只认类名。页面根节点写 class="page" 才会套上。
+	   字号和颜色写在这里：Web 会继承到 text，App 不继承，裸 text 仍是 16px 黑。 */
+	.page {
+		background-color: var(--saco-bg-color);
+		color: var(--saco-text-color);
+		font-size: var(--saco-font-size);
+	}
+
+	/* 暗色只换了种子，--saco-bg-color 仍是亮色白。页面底改用暗色黑，正文用暗色字 */
+	@media (prefers-color-scheme: dark) {
+		.page {
+			background-color: var(--saco-color-black);
+			color: var(--saco-color-text);
+		}
+	}
 </style>

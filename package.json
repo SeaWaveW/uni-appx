@@ -7,7 +7,7 @@
 	},
 	"dependencies": {
 		"@saco/rpx-plugin": "^1.0.0",
-		"@saco/ui": "file:../saco-ui",
+		"@saco/ui": "^2.0.1",
 		"@saco/xlsx-plugin": "^1.0.1"
 	},
 	"rpx-plugin": {

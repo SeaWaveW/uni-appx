@@ -13,11 +13,12 @@ const localeDir = path.join(repoRoot, 'locale')
 
 /**
  * uni-app x 简体标签是 zh-Hans，不是 zh-CN。
- * 表头已经写成 zh-Hans / en-US 时原样用。
+ * 英文用 en。表头写成 en-US 时收成 en，避免再出一份 en-US.json。
  */
 const toLocaleTag = (iso) => {
 	if (/^zh-cn$/i.test(iso)) return 'zh-Hans'
 	if (/^zh-(tw|hk|mo)$/i.test(iso)) return 'zh-Hant'
+	if (/^en(-us)?$/i.test(iso)) return 'en'
 	return iso
 }
 

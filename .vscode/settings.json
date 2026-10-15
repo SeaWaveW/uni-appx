@@ -1,0 +1,6 @@
+{
+	"files.exclude": {
+		"**/.hbuilderx": true,
+		"**/unpackage": true
+	}
+}

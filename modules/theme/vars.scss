@@ -1,0 +1,36 @@
+// 由 modules/theme/color.xlsx 生成，不要手改
+// 组件库 var.scss 只读这几个种子。必须在引入 var.scss 之前赋值
+$color-palette: (
+	primary-color: (
+		light: #266FFF,
+		dark: #3B82F6,
+	),
+	success-color: (
+		light: #71C016,
+		dark: #34D399,
+	),
+	warning-color: (
+		light: #C29300,
+		dark: #FBBF24,
+	),
+	danger-color: (
+		light: #FF0000,
+		dark: #FB7185,
+	),
+	info-color: (
+		light: #888888,
+		dark: #94A3B8,
+	),
+	white-color: (
+		light: #FFFFFF,
+		dark: #EAF2FF,
+	),
+	black-color: (
+		light: #000000,
+		dark: #070B14,
+	),
+	text-color: (
+		light: #515151,
+		dark: #CBD5E1,
+	),
+);

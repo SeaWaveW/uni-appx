@@ -1,20 +1,36 @@
 <template>
 	<view class="page">
-		<saco-button type="primary" @click="onClick">按钮</saco-button>
+		<saco-button type="primary" @click="onClick" :loading="btxLoading">
+			{{ btxBoo ? t('yes') : t('not') }}
+		</saco-button>
+		<saco-button @click="onUpLoading">修改loading</saco-button>
 	</view>
 </template>
 
 <script setup lang="uts">
+	import { useI18n } from 'vue-i18n'
+
+	const { t } = useI18n()
+	const btxBoo = ref(true)
+	const btxLoading = ref(false)
 	const onClick = () => {
-		uni.showToast({
-			title: '点击',
-			icon: 'none',
-		})
+		console.log('before-boo:', btxBoo.value)
+		btxBoo.value = !btxBoo.value
+		console.log('after-boo:', btxBoo.value)
+	}
+	const onUpLoading = () => {
+		console.log('before-loading:', btxLoading.value)
+		btxLoading.value = !btxLoading.value
+		console.log('after-loading:', btxLoading.value)
 	}
 </script>
 
 <style>
+	/* 写 px，交给 rpx 插件按稿宽 375 换成 rpx。四边分开写，简写会被 uvue 丢掉 */
 	.page {
-		padding: 24px;
+		padding-top: 24px;
+		padding-right: 24px;
+		padding-bottom: 24px;
+		padding-left: 24px;
 	}
 </style>

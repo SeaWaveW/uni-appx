@@ -1,8 +1,11 @@
 import App from './App.uvue'
 import { createSSRApp } from 'vue'
+import { i18n } from './modules/i18n/index.uts'
 
 export function createApp() {
 	const app = createSSRApp(App)
+	// vue-i18n 由 HBuilderX 内置。语言包在根目录 locale，页面用 useI18n() 的 t()
+	app.use(i18n)
 	return {
 		app,
 	}

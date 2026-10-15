@@ -1,7 +1,9 @@
 // 必须写在 @import 前面。var.scss 里是 !default，写晚了会留下默认的 data-theme-type
-// 亮色挂在 page 上。暗色同一节点，由系统 prefers-color-scheme 包一层，页面不要写死主题类
-$theme-light-selector: 'page';
-$theme-dark-selector: 'page';
+// uvue 不认 page 标签选择器。变量挂在页面根的 .page 上，按钮才能读到色板
+$theme-light-selector: '.page';
+$theme-dark-selector: '.page';
 $theme-dark-media: '(prefers-color-scheme: dark)';
 
+// 种子色来自 color.xlsx。写在 var.scss 前面，!default 才会让出默认的 #409eff
+@import '@/modules/theme/vars.scss';
 @import '@saco/ui/theme-chalk/src/common/var.scss';
